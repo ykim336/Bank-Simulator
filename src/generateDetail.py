@@ -1,4 +1,4 @@
-from .datasetManager import *
+from datasetManager import *
 from openai import *
 import json
 

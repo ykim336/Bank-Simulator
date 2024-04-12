@@ -7,16 +7,18 @@ import os
 import uuid
 
 DOWNLOAD_PATH = "downloads"
+HEIGHT_VALUE = 529
+WIDTH_VALUE = 774
 
 class Widget(QMainWindow, Ui_MainWindow):
     def __init__(self):
         super().__init__()
         self.setupUi(self)
-        self.setWindowTitle("stuffSeller")
+        self.setWindowTitle("bankSimulator")
 
-        self.setGeometry(200, 455, 773, 560)
-        self.setMaximumHeight(560)
-        self.setMaximumWidth(773)
+        self.setGeometry(200, 455, WIDTH_VALUE, HEIGHT_VALUE)
+        self.setMaximumHeight(HEIGHT_VALUE)
+        self.setMaximumWidth(WIDTH_VALUE)
 
 # TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO 
         self.shopnames = ["customizedblankets4u", "some name", "some name part 2"]  # List to hold shop names 
