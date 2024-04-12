@@ -51,9 +51,9 @@ def uploadImage(localPath, s3ID, s3Preset, s3BucketName="customizedblankets4u", 
 
 def testing_function():
     # INSTRUCTION: Must put s3InputPath and s3ReplacementImagePath as lists. 
-    print("Testing replaceSmartObject Function...")
-    replaceSmartObject("mockup1", "test", "pattern", "Design #1")
-    print("Completed Test for replaceSmartObject...")
+    # print("Testing replaceSmartObject Function...")
+    # replaceSmartObject("mockup1", "test", "pattern", "Design #1")
+    # print("Completed Test for replaceSmartObject...")
 
     # print("Testing downloadImage Function...")
     # downloadImage([r"C:\Users\kmyn7\Downloads\uuid"], "tests", "mockup1", "customizedblankets4u", "input")
@@ -62,5 +62,3 @@ def testing_function():
     # print("Testing uploadImage Function...")
     # uploadImage([r"C:\Users\kmyn7\Downloads BLANKETS\FINISHED\Seamless-Kawaii-Cute-Cats-Pattern-8674392\design_test.jpg"], "tests", "mockup2", "customizedblankets4u", "input")
     # print("Completed Test for uploadImage...")
-
-# testing_function()

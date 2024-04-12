@@ -1,4 +1,4 @@
 tiktoken
 numpy
 openai
-subprocess
+PySide6
