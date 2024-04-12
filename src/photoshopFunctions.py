@@ -4,7 +4,7 @@ import os
 AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
 AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
 
-HELPER_PATH = f":static/helpers/"
+HELPER_PATH = f":helpers/"
 
 # To use this, you need to make every path and layers a list.
 def replaceSmartObject(s3InputPath, s3ReplacementImagePath, s3Preset, smartObjectLayerName, output_path="output", input_path="input", replacement_path="replacement", s3BucketName="customizedblankets4u", awsRegion="us-east-2", file_type="image/jpeg"):

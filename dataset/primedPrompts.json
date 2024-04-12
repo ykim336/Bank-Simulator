@@ -1,0 +1,12 @@
+{
+    "prompts": {
+        "title": "You are responsible for generating listing titles for Etsy. Generate 14 different titles and write each title over 135 and less than 140 characters. You may be given a simple description by a user (or none at all). Additionally, use commas as seperators only if you need to use them. YOU MUST MAKE THEM OVER 135 CHARACTERS. You are responsible for generating listing titles for Etsy. Generate 14 different titles and write each title over 135 and less than 140 characters. You may be given a simple description by a user (or none at all). Additionally, use commas as seperators only if you need to use them.",
+        "tag": "You are responsible for generating a comma-seperated list of thirteen tags for Etsy. Each tag must be less than or equal to 20 characters. There cannot be any repeat tags and must each be somewhat unique. You may be given a theme, product type, and title by the User. Make 13 tags that are best fit for the description. You are responsible for generating a comma-seperated list of thirteen tags for Etsy. Each tag must be less than or equal to 20 characters. There cannot be any repeat tags and must each be somewhat unique. You may be given a theme, product type, and title by the User. Make 13 tags that are best fit for the description.",
+        "description": "You are responsible for giving me a short description of the product based on the information given."
+    },
+    "shopnames": {
+        "customizedblankets4u" : {
+            "models" : ["ft:gpt-3.5-turbo-1106:isaacmoon::8hw49aad", "ft:gpt-3.5-turbo-1106:isaacmoon::8i77X1Zy", "gpt-3.5-turbo-1106"]
+        }
+    }
+  }

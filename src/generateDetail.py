@@ -2,6 +2,7 @@ from datasetManager import *
 from openai import *
 import json
 
+PROMPT_FILEPATH = "dataset\primedPrompts.json"
 client = OpenAI()
 
 # Generates a string response of the specific model
@@ -21,7 +22,7 @@ def test_dataset(filename="blankets_titles.jsonl"):
     format_validation(dataset)
 
 # Extracts prompts from a .json file in the statics folder
-def extract_prompts(filename="static\primedPrompts.json"):
+def extract_prompts(filename=PROMPT_FILEPATH):
     with open(filename, "r") as f:
         return json.load(f)
 
