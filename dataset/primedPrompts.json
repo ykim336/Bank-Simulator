@@ -5,6 +5,9 @@
         "description": "You are responsible for giving me a short description of the product based on the information given."
     },
     "shopnames": {
+        "ashleysblanketgifts" : {
+            "models" : ["ft:gpt-3.5-turbo-1106:isaacmoon::8hw49aad", "ft:gpt-3.5-turbo-1106:isaacmoon::8i77X1Zy", "gpt-3.5-turbo-1106"]
+        },
         "customizedblankets4u" : {
             "models" : ["ft:gpt-3.5-turbo-1106:isaacmoon::8hw49aad", "ft:gpt-3.5-turbo-1106:isaacmoon::8i77X1Zy", "gpt-3.5-turbo-1106"]
         }

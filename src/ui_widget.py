@@ -73,7 +73,7 @@ class Ui_MainWindow(object):
         self.user_input = QLineEdit(self.centralwidget)
         self.user_input.setObjectName(u"user_input")
         self.user_input.setGeometry(QRect(10, 90, 371, 21))
-        self.user_input.setStyleSheet(u"background-color:white;\ncolor: black;\n"
+        self.user_input.setStyleSheet(u""
 "")
         self.gridLayoutWidget = QWidget(self.centralwidget)
         self.gridLayoutWidget.setObjectName(u"gridLayoutWidget")
@@ -143,7 +143,7 @@ class Ui_MainWindow(object):
         self.upload_button.setText(QCoreApplication.translate("MainWindow", u"Upload Design", None))
         self.clear_button.setText(QCoreApplication.translate("MainWindow", u"Clear", None))
         self.selected_label.setText(QCoreApplication.translate("MainWindow", u"0 Selected.", None))
-        self.user_input.setPlaceholderText(QCoreApplication.translate("MainWindow", u" Theme: (e.g. Valentines or Christmas)", None))
+        self.user_input.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Theme: (e.g. Valentines or Christmas)", None))
         self.description_label.setText(QCoreApplication.translate("MainWindow", u"Description", None))
         self.toggle_button.setText(QCoreApplication.translate("MainWindow", u"Toggle All", None))
         self.shopname_label.setText(QCoreApplication.translate("MainWindow", u"Shop Name", None))

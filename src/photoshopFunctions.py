@@ -4,18 +4,19 @@ import os
 AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
 AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
 
-HELPER_PATH = f":helpers/"
+HELPER_PATH = r"C:\Users\kmyn7\Dropbox\generative projects\bankSimulator\src\helpers"
+PATH_JS = r"src\photoshopFunctions.js"
 
 # To use this, you need to make every path and layers a list.
 def replaceSmartObject(s3InputPath, s3ReplacementImagePath, s3Preset, smartObjectLayerName, output_path="output", input_path="input", replacement_path="replacement", s3BucketName="customizedblankets4u", awsRegion="us-east-2", file_type="image/jpeg"):
     command = f"replaceSmartObject('{s3InputPath}', '{s3ReplacementImagePath}', '{s3Preset}', '{smartObjectLayerName}', '{output_path}', '{input_path}', '{replacement_path}', '{s3BucketName}', '{awsRegion}', '{file_type}')"
     
-    with open("photoshopFunctions.js", "r") as f:
+    with open(PATH_JS, "r") as f:
         js_code = f.read()
-        with open(f"{HELPER_PATH}photoshopFunctionsHelper.js", "w") as w:
+        with open(f"{HELPER_PATH}\photoshopFunctionsHelper.js", "w") as w:
             w.write(js_code + command)
 
-    js_file = f"{HELPER_PATH}photoshopFunctionsHelper.js"
+    js_file = f"{HELPER_PATH}\photoshopFunctionsHelper.js"
     try:
         subprocess.run(["node", js_file], check=True)
     except subprocess.CalledProcessError as e:
@@ -24,12 +25,12 @@ def replaceSmartObject(s3InputPath, s3ReplacementImagePath, s3Preset, smartObjec
 def downloadImage(localPath, s3ID, s3Preset, s3BucketName="customizedblankets4u", outputPath="output", awsRegion="us-east-2"):
     command = f"downloadImage({localPath}, '{s3ID}', '{s3Preset}', '{s3BucketName}', '{outputPath}', '{awsRegion}')"
     
-    with open("photoshopFunctions.js", "r") as f:
+    with open(PATH_JS, "r") as f:
         js_code = f.read()
-        with open(f"{HELPER_PATH}photoshopFunctionsHelper.js", "w") as w:
+        with open(f"{HELPER_PATH}\photoshopFunctionsHelper.js", "w") as w:
             w.write(js_code + command)
 
-    js_file = f"{HELPER_PATH}photoshopFunctionsHelper.js"
+    js_file = f"{HELPER_PATH}\photoshopFunctionsHelper.js"
     try:
         subprocess.run(["node", js_file], check=True)
     except subprocess.CalledProcessError as e:
@@ -38,12 +39,12 @@ def downloadImage(localPath, s3ID, s3Preset, s3BucketName="customizedblankets4u"
 def uploadImage(localPath, s3ID, s3Preset, s3BucketName="customizedblankets4u", outputPath="output", awsRegion="us-east-2"):
     command = f"uploadImage({localPath}, '{s3ID}', '{s3Preset}', '{s3BucketName}', '{outputPath}', '{awsRegion}')"
     
-    with open("photoshopFunctions.js", "r") as f:
+    with open(PATH_JS, "r") as f:
         js_code = f.read()
-        with open(f"{HELPER_PATH}photoshopFunctionsHelper.js", "w") as w:
+        with open(f"{HELPER_PATH}\photoshopFunctionsHelper.js", "w") as w:
             w.write(js_code + command)
 
-    js_file = f"{HELPER_PATH}photoshopFunctionsHelper.js"
+    js_file = f"{HELPER_PATH}\photoshopFunctionsHelper.js"
     try:
         subprocess.run(["node", js_file], check=True)
     except subprocess.CalledProcessError as e:

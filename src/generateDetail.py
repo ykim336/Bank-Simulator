@@ -2,7 +2,7 @@ from datasetManager import *
 from openai import *
 import json
 
-PROMPT_FILEPATH = "dataset\primedPrompts.json"
+PROMPT_FILEPATH = r"C:\Users\kmyn7\Dropbox\generative projects\bankSimulator\dataset\primedPrompts.json"
 client = OpenAI()
 
 # Generates a string response of the specific model

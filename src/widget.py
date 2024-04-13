@@ -1,12 +1,13 @@
 from PySide6.QtCore import Qt, QDateTime
 from ui_widget import Ui_MainWindow
 from PySide6.QtWidgets import QApplication, QMainWindow, QFileDialog, QListWidgetItem
+from PySide6.QtGui import QColor
 from photoshopFunctions import *
 from generateDetail import *
 import os
 import uuid
 
-DOWNLOAD_PATH = "downloads"
+DOWNLOAD_PATH = r"C:\Users\kmyn7\Dropbox\generative projects\bankSimulator\downloads"
 HEIGHT_VALUE = 529
 WIDTH_VALUE = 774
 
@@ -16,13 +17,16 @@ class Widget(QMainWindow, Ui_MainWindow):
         self.setupUi(self)
         self.setWindowTitle("bankSimulator")
 
-        self.setGeometry(200, 455, WIDTH_VALUE, HEIGHT_VALUE)
+        self.setGeometry(200, 100, WIDTH_VALUE, HEIGHT_VALUE)
         self.setMaximumHeight(HEIGHT_VALUE)
         self.setMaximumWidth(WIDTH_VALUE)
 
+        self.shopname_list.setStyleSheet("QListWidget { background-color: black; }")
+        self.description.setStyleSheet("QListWidget { background-color: black; }")
+
 # TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO 
-        self.shopnames = ["customizedblankets4u", "some name", "some name part 2"]  # List to hold shop names 
-        self.descriptions = ["cool shit but died", "hell nah", "testing if this is a scrolling thing but prolly not, but i really don't care about it."]  # List of descriptions  
+        self.shopnames = ["customizedblankets4u", "ashleysblanketgifts"]  # List to hold shop names 
+        self.descriptions = ["cool shit but died", "hell nah"]  # List of descriptions  
 # TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO 
 
         # Initialize a list to store uploaded file paths and shops
@@ -80,7 +84,7 @@ class Widget(QMainWindow, Ui_MainWindow):
     def updateSelectedLabel(self):
         current_text = f"{len(self.uploaded_files)} selected."
         if len(self.uploaded_files) == 0:
-            current_text = "None Selected"
+            current_text = "0 Selected."
         self.selected_label.setText(current_text)
 
     def submitButton(self):
@@ -118,9 +122,11 @@ class Widget(QMainWindow, Ui_MainWindow):
                 uploadImage([image], f"{random_uuid}", "design", f"{shop}", "replacement")
                 downloadImage([new_folder_path], f"{random_uuid}", "design", f"{shop}", "replacement")
 # TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO 
-                for i in range(1):
+                for i in range(2):
                     replaceSmartObject(f"mockup{str(i+1)}", f"{random_uuid}", "design", "Design #1", "output", "input", "replacement", f"{shop}")
                     downloadImage([new_folder_path], f"{random_uuid}", f"mockup{str(i+1)}", f"{shop}", "output")
+                    replaceSmartObject(f"supporting{str(i+1)}", f"{random_uuid}", "design", "Design #1", "output", "supporting", "replacement", f"{shop}")
+                    downloadImage([new_folder_path], f"{random_uuid}", f"supporting{str(i+1)}", f"{shop}", "output")
 # TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO 
                 print("Success!")
 
