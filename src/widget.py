@@ -21,9 +21,6 @@ class Widget(QMainWindow, Ui_MainWindow):
         self.setMaximumHeight(HEIGHT_VALUE)
         self.setMaximumWidth(WIDTH_VALUE)
 
-        self.shopname_list.setStyleSheet("QListWidget { background-color: black; }")
-        self.description.setStyleSheet("QListWidget { background-color: black; }")
-
 # TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO 
         self.shopnames = ["customizedblankets4u", "ashleysblanketgifts"]  # List to hold shop names 
         self.descriptions = ["cool shit but died", "hell nah"]  # List of descriptions  
@@ -45,7 +42,6 @@ class Widget(QMainWindow, Ui_MainWindow):
         self.clear_button.clicked.connect(self.clearButton)
 
         self.shopname_list.clicked.connect(self.updateDescription)
-
         self.repopulateList()
 
     def clearButton(self):
